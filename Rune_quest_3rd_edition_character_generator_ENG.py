@@ -167,6 +167,7 @@ print "This program creates a human character for RuneQuest 3rd edition"
 print "*****************************************************************"
 
 choice = (raw_input("Create a new character? Y/N: ")).lower()
+# creates file to output created stats
 output_file = open("Character.txt", "w")
 if choice == "n":
     print "Closing program..."
