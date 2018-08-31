@@ -3,13 +3,15 @@
 # Matti Eronen
 
 from random import randint
+from time import strftime
 
 
 # main character creation function
 def characteristics():
 
-     
+    time_stamp =  strftime("%c") 
     age = 15 + randint(2, 12)
+    print time_stamp
     print "Age: ", age
     print "Characteristics:"
 
@@ -57,7 +59,8 @@ def characteristics():
     strike_r = strike_rank(DEX_rank(DEX), SIZ_rank(SIZ))
     
     # need return function for txt file printing
-    return "Age: %2d" % age + "\nCharacteristics:\nSTR: %2d\nCON:  %2d\nSIZ: %2d\nINT: %2d\nPOW: %2d\nDEX: %2d\nCHA: %2d\n" % \
+    return time_stamp + \
+           "\nAge: %2d" % age + "\nCharacteristics:\nSTR: %2d\nCON:  %2d\nSIZ: %2d\nINT: %2d\nPOW: %2d\nDEX: %2d\nCHA: %2d\n" % \
            (STR, CON, SIZ, INT, POW, DEX, CHA) + \
            "Total: %d\n" % (STR + CON + SIZ + INT + POW + DEX + CHA) + \
            "Skills & modifiers:\n" + "Agility: %2d\nCommunication: %2d\nKnowledge: %2d\nManipulation: %2d\nPerception: %2d\n" % \
@@ -167,7 +170,6 @@ print "This program creates a human character for RuneQuest 3rd edition"
 print "*****************************************************************"
 
 choice = (raw_input("Create a new character? Y/N: ")).lower()
-# creates file to output created stats
 output_file = open("Character.txt", "w")
 if choice == "n":
     print "Closing program..."
