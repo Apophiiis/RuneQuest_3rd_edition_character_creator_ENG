@@ -29,10 +29,10 @@ def characteristics():
     agility       = int(float(DEX - 10)) + (int(float(STR - 10) / 2)) - int(float(SIZ - 10))          # primary, secondary, negative
     communication = int(float(INT - 10)) + (int(float(POW - 10) / 2)) + (int(float(CHA - 10) / 2))    # primary, secondary, secondary
     knowledge     = int(float(INT - 10))                                                              # primary
-    magic         = int(float(INT - 10)) + int(float(POW - 10)) + (int(float(DEX - 10) / 2))          # primary, secondary, secondary
-    manipulation  = int(float(INT - 10)) + int(float(DEX - 10)) + (int(float(STR - 10) / 2))          # primary, secondary, secondary
+    magic         = int(float(INT - 10)) + (int(float(POW - 10) / 2)) + (int(float(DEX - 10) / 2))          # primary, secondary, secondary
+    manipulation  = int(float(INT - 10)) + (int(float(DEX - 10) / 2)) + (int(float(STR - 10) / 2))          # primary, secondary, secondary
     perception    = int(float(INT - 10)) + (int(float(POW - 10) / 2)) + (int(float(CON - 10) / 2))    # primary, secondary, secondary
-    stealth       = int(float(DEX - 10)) - int(float(SIZ - 10)) - int(float(POW - 10))                # primary, secondary, negative
+    stealth       = int(float(DEX - 10)) - (int(float(SIZ - 10) / 2)) - int(float(POW - 10))                # primary, secondary, negative
     hit_points    = int(((float(SIZ) + float(CON)) / 2) + 0.5)
     dmg_bonus     = SIZ + STR
      
